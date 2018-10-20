@@ -22,5 +22,6 @@ class MainActivity : AppCompatActivity() {
         Snackbar.make(layout, "Hola desde SnacKBar", Snackbar.LENGTH_LONG).setAction("Deshacer"){
             Snackbar.make(layout, "Dato restaurado", Snackbar.LENGTH_LONG).show()
         }.show()
+
     }
 }
