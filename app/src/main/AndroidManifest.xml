@@ -16,6 +16,24 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".activities.LifeCycleActivity">
+        </activity>
+        <activity android:name=".activities.ClickEventesActivity">
+        </activity>
+        <activity android:name=".activities.ExtensionFunctionsActivity">
+        </activity>
+        <activity android:name=".activities.IntentsActivity">
+        </activity>
+        <activity android:name=".activities.KodlinAndroidExtensionsActivity">
+        </activity>
+        <activity android:name=".activities.ListViewActivity">
+        </activity>
+        <activity android:name=".activities.PermissionsActivity">
+        </activity>
+        <activity android:name=".activities.PicassoActivity">
+        </activity>
+        <activity android:name=".activities.SharedPreferencesActivity">
+        </activity>
     </application>
 
 </manifest>
