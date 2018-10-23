@@ -34,6 +34,8 @@
         </activity>
         <activity android:name=".activities.SharedPreferencesActivity">
         </activity>
+        <activity android:name=".activities.LifeCycleEventsActivity">
+        </activity>
     </application>
 
 </manifest>
