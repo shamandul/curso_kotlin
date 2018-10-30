@@ -1,4 +1,4 @@
-package es.webweaver.practicascurso1.activities
+package es.webweaver.practicascurso1.others
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

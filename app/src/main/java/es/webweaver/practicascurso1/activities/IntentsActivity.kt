@@ -1,17 +1,21 @@
 package es.webweaver.practicascurso1.activities
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
 import es.webweaver.practicascurso1.R
 import es.webweaver.practicascurso1.model.Student
+import es.webweaver.practicascurso1.others.ToolbarActivity
 import kotlinx.android.synthetic.main.activity_intents.*
+import kotlinx.android.synthetic.main.activity_main.*
 
-class IntentsActivity : AppCompatActivity() {
+class IntentsActivity : ToolbarActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intents)
+
+        toolbarToLoad(toolbar as Toolbar)
 
         buttonIntentExtras.setOnClickListener { goIntentExtras() }
         buttonIntentFlags.setOnClickListener { goIntentFlags() }

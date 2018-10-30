@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.widget.Toast
 import es.webweaver.practicascurso1.R
+import es.webweaver.practicascurso1.others.LifeCycleEventsActivity
 
 class LifeCycleActivity : LifeCycleEventsActivity() {
 

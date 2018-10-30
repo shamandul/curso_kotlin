@@ -1,16 +1,20 @@
 package es.webweaver.practicascurso1.activities
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
 import com.squareup.picasso.Picasso
 import es.webweaver.practicascurso1.R
+import es.webweaver.practicascurso1.others.ToolbarActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_picasso.*
 
-class PicassoActivity : AppCompatActivity() {
+class PicassoActivity : ToolbarActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_picasso)
+
+        toolbarToLoad(toolbar as Toolbar)
 
         buttonLoader.setOnClickListener { loadImages() }
 

@@ -1,18 +1,23 @@
 package es.webweaver.practicascurso1.activities
 
-import android.support.v7.app.AppCompatActivity
+
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import es.webweaver.practicascurso1.R
+import es.webweaver.practicascurso1.others.ToolbarActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
-class ClickEventesActivity : AppCompatActivity(), View.OnLongClickListener {
+class ClickEventesActivity : ToolbarActivity(), View.OnLongClickListener {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_click_eventes)
+
+        toolbarToLoad(toolbar as Toolbar)
 
         clickInLine()
 

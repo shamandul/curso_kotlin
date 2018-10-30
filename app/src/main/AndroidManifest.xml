@@ -36,9 +36,14 @@
         </activity>
         <activity android:name=".activities.SharedPreferencesActivity">
         </activity>
-        <activity android:name=".activities.LifeCycleEventsActivity">
+        <activity android:name=".others.LifeCycleEventsActivity">
         </activity>
         <activity android:name=".activities.IntentExtrasActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity"/>
+        </activity>
+        <activity android:name=".others.ToolbarActivity">
         </activity>
     </application>
 
