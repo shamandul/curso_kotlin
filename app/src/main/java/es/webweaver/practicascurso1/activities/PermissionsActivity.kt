@@ -13,7 +13,7 @@ import android.widget.Toast
 import es.webweaver.practicascurso1.R
 import es.webweaver.practicascurso1.others.ToolbarActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_permissions.* import java.util.jar.Manifest
+import kotlinx.android.synthetic.main.activity_permissions.*
 
 class PermissionsActivity : ToolbarActivity() {
 
@@ -29,6 +29,19 @@ class PermissionsActivity : ToolbarActivity() {
         buttonPicture.setOnClickListener { getPictureFromCameraAskingPermissions() }
     }
 
+    private fun getPictureFromCamera(){
+        //Asegurarnos de que no hay permiso en el manifest
+        // Crear intent de captura
+        val pictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        //comprobamos que podemos manejar la camara de fotos( Tenemos Camara y app de camara)
+        if(pictureIntent.resolveActivity(packageManager) != null){
+
+        }else{
+            // No hay activity que puedamanejar lael intent (por ejemplo sin camara)
+            startActivityForResult(pictureIntent,requestCameraPicture)
+        }
+    }
+
     private fun getPictureFromCameraAskingPermissions(){
         // añadir permiso al manifest
         // comprobar el permiso de la camara
@@ -36,7 +49,7 @@ class PermissionsActivity : ToolbarActivity() {
             // Si no  ha sido  aceptado los permisos (para la API 23 wen adelante
             ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.CAMERA), 100)
         }else{
-            // si si ha sido aceptado anteriormente para todas las versiones
+            // Si ha sido aceptado anteriormente para todas las versiones
             val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
             startActivityForResult(intent, requestCameraPicture)
         }

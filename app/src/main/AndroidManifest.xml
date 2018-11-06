@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE manifest [
+        <!ELEMENT manifest (uses-permission)*>
+        <!ATTLIST manifest
+                xmlns:android CDATA #REQUIRED
+                package CDATA #REQUIRED>
+        <!ELEMENT uses-permission (#PCDATA)>
+        <!ATTLIST uses-permission
+                android:name CDATA #REQUIRED>
+        ]>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="es.webweaver.practicascurso1">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <!--<uses-permission android:name="android.permission.CAMERA"/>-->
 
 
     <application
