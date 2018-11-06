@@ -24,5 +24,9 @@
     <string name="preferences_age_hint">Type age here</string>
     <string name="prefernces_button_save">save</string>
     <string name="button_take_picture">Take a picture</string>
+    <string name="extensions_toast">Toast</string>
+    <string name="extensions_snack_bar">Snack Bar</string>
+    <string name="extensions_go_to">Go To Activity</string>
+    <string name="extensions_load_url">Load URL</string>
 
 </resources>
